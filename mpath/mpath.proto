@@ -1,0 +1,336 @@
+message "meta-data" {
+  required double sample-count = 0
+
+  message RESULTS {
+
+    message SNP-INDEL-SILENT-NP {
+      required string alt_allele = 0
+      required double oncokb_reported = 1
+      required double so_status_cv_id = 2
+
+      message RLEVEL {
+      }
+
+      required RLEVEL rlevel = 3
+      required string mafreq_1000g = 4
+      required string mrev_status_name = 5
+      required string variant_class = 6
+      required double confidence_cv_id = 7
+      required string so_status_name = 8
+
+      message ONCOKB_VER {
+      }
+
+      required ONCOKB_VER oncokb_ver = 9
+      required double mrev_status_cv_id = 10
+      required string ref_allele = 11
+      required string chromosome = 12
+      required double variant_class_cv_id = 13
+      required string snp_indel_tool_name = 14
+      required string cDNA_change = 15
+
+      message OCCURANCE_IN_POP {
+      }
+
+      required OCCURANCE_IN_POP occurance_in_pop = 16
+      required string so_comments = 17
+      required double normal_dp = 18
+      required string variant_status_name = 19
+
+      message COMMENTS {
+      }
+
+      required COMMENTS comments = 20
+      required string transcript_id = 21
+      required double variant_status_cv_id = 22
+      required double dmp_variant_id = 23
+      required double is_hotspot = 24
+      required string dbSNP_id = 25
+
+      message TREATMENTS {
+      }
+
+      required TREATMENTS treatments = 26
+      required string gene_id = 27
+      required double tumor_ad = 28
+      required double dmp_sample_mrev_id = 29
+      required double start_position = 30
+      required double snp_indel_variant_id = 31
+      required string occurance_in_normal = 32
+      required string mrev_comments = 33
+      required double normal_vfreq = 34
+
+      message LEVEL {
+      }
+
+      required LEVEL level = 35
+      required double tumor_vfreq = 36
+
+      message ONCOGENIC {
+      }
+
+      required ONCOGENIC oncogenic = 37
+      required string exon_num = 38
+      required double normal_ad = 39
+      required string cosmic_id = 40
+      required string clinical-signed-out = 41
+      required string confidence_class = 42
+      required double dmp_sample_so_id = 43
+      required double tumor_dp = 44
+
+      message ONCOKB_INTERPRETATION {
+      }
+
+      required ONCOKB_INTERPRETATION oncokb_interpretation = 45
+      required string aa_change = 46
+    }
+
+    repeated SNP-INDEL-SILENT-NP snp-indel-silent-np = 0
+
+    message CNV-VARIANTS {
+      required double oncokb_reported = 0
+      required double gene_p_value = 1
+
+      message RLEVEL {
+      }
+
+      required RLEVEL rlevel = 2
+      required double cnv_filter_cv_id = 3
+      required double confidence_cv_id = 4
+
+      message ONCOKB_VER {
+      }
+
+      required ONCOKB_VER oncokb_ver = 5
+
+      message ONCOGENIC {
+      }
+
+      required ONCOGENIC oncogenic = 6
+      required string chromosome = 7
+      required string variant_status_name = 8
+
+      message COMMENTS {
+      }
+
+      required COMMENTS comments = 9
+      required double variant_status_cv_id = 10
+      required string confidence_class = 11
+
+      message TREATMENTS {
+      }
+
+      required TREATMENTS treatments = 12
+      required double gene_fold_change = 13
+      required string gene_id = 14
+      required double is_significant = 15
+      required string cytoband = 16
+
+      message LEVEL {
+      }
+
+      required LEVEL level = 17
+      required string cnv_filter_name = 18
+      required double cnv_variant_id = 19
+      required string cnv_class_name = 20
+      required string clinical-signed-out = 21
+      required double cnv_class_cv_id = 22
+
+      message ONCOKB_INTERPRETATION {
+      }
+
+      required ONCOKB_INTERPRETATION oncokb_interpretation = 23
+    }
+
+    repeated CNV-VARIANTS cnv-variants = 1
+
+    message SNP-INDEL-SILENT {
+      required string alt_allele = 0
+      required double oncokb_reported = 1
+      required double so_status_cv_id = 2
+
+      message RLEVEL {
+      }
+
+      required RLEVEL rlevel = 3
+      required string mafreq_1000g = 4
+      required string mrev_status_name = 5
+      required string variant_class = 6
+      required double confidence_cv_id = 7
+      required string so_status_name = 8
+
+      message ONCOKB_VER {
+      }
+
+      required ONCOKB_VER oncokb_ver = 9
+      required double mrev_status_cv_id = 10
+      required string ref_allele = 11
+      required string chromosome = 12
+      required double variant_class_cv_id = 13
+      required string snp_indel_tool_name = 14
+      required string cDNA_change = 15
+
+      message OCCURANCE_IN_POP {
+      }
+
+      required OCCURANCE_IN_POP occurance_in_pop = 16
+      required string so_comments = 17
+      required double normal_dp = 18
+      required string variant_status_name = 19
+
+      message COMMENTS {
+      }
+
+      required COMMENTS comments = 20
+      required string transcript_id = 21
+      required double variant_status_cv_id = 22
+      required double dmp_variant_id = 23
+      required double is_hotspot = 24
+      required string dbSNP_id = 25
+
+      message TREATMENTS {
+      }
+
+      required TREATMENTS treatments = 26
+      required string gene_id = 27
+      required double tumor_ad = 28
+      required double dmp_sample_mrev_id = 29
+      required double start_position = 30
+      required double snp_indel_variant_id = 31
+      required string occurance_in_normal = 32
+      required string mrev_comments = 33
+      required double normal_vfreq = 34
+
+      message LEVEL {
+      }
+
+      required LEVEL level = 35
+      required double tumor_vfreq = 36
+
+      message ONCOGENIC {
+      }
+
+      required ONCOGENIC oncogenic = 37
+      required string exon_num = 38
+      required double normal_ad = 39
+      required string cosmic_id = 40
+      required string clinical-signed-out = 41
+      required string confidence_class = 42
+      required double dmp_sample_so_id = 43
+      required double tumor_dp = 44
+
+      message ONCOKB_INTERPRETATION {
+      }
+
+      required ONCOKB_INTERPRETATION oncokb_interpretation = 45
+      required string aa_change = 46
+    }
+
+    repeated SNP-INDEL-SILENT snp-indel-silent = 2
+
+    message META-DATA {
+      required double tmb_tt_percentile = 0
+      required double tmb_score = 1
+      required string dt_alys_end_time = 2
+      required string metastasis_site = 3
+      required double tmb_cohort_percentile = 4
+      required string mrev_status_name = 5
+      required string msi-score = 6
+      required string slide-viewer-id = 7
+      required string gene-panel = 8
+      required string dmp_patient_id = 9
+      required double tmb_tt_cohort = 10
+      required string so_comments = 11
+      required string dmp_sample_id = 12
+      required double retrieve_status = 13
+      required double cbx_sample_id = 14
+      required string dt_dms_start_time = 15
+      required double is_metastasis = 16
+      required string date_tumor_sequencing = 17
+      required string somatic_status = 18
+      required double dmp_sample_so_id = 19
+      required double alys2sample_id = 20
+      required string tumor_type_code = 21
+
+      message LEGACY_PATIENT_ID {
+      }
+
+      required LEGACY_PATIENT_ID legacy_patient_id = 22
+      required double cbx_patient_id = 23
+      required bool consent-parta = 24
+      required bool consent-partc = 25
+      required double dmp_alys_task_id = 26
+      required string tumor_purity = 27
+      required string mrev_comments = 28
+      required double sample_coverage = 29
+      required double gender = 30
+      required string msi-type = 31
+      required string tumor_type_name = 32
+
+      message LEGACY_SAMPLE_ID {
+      }
+
+      required LEGACY_SAMPLE_ID legacy_sample_id = 33
+      required string outside_institute = 34
+      required double tmb_cohort = 35
+      required string msi-comment = 36
+      required string primary_site = 37
+      required string dmp_alys_task_name = 38
+      required string so_status_name = 39
+    }
+
+    required META-DATA meta-data = 3
+    repeated undefined snp-indel-exonic = 4
+    repeated undefined cnv-intragenic-variants = 5
+
+    message SV-VARIANTS {
+      required string site1_desc = 0
+      required double oncokb_reported = 1
+      required double tumor_variant_count = 2
+
+      message RLEVEL {
+      }
+
+      required RLEVEL rlevel = 3
+      required double normal_variant_count = 4
+      required string variant_status_name = 5
+      required string site1_gene = 6
+      required string site2_chrom = 7
+      required string oncogenic = 8
+      required string connection_type = 9
+      required string site2_desc = 10
+      required string event_info = 11
+      required string comments = 12
+      required string conn_type = 13
+      required double sv_variant_id = 14
+      required double mapq = 15
+      required string site1_chrom = 16
+      required double site1_pos = 17
+
+      message SV_DESC {
+      }
+
+      required SV_DESC sv_desc = 18
+      required string sv_class_name = 19
+      required string breakpoint_type = 20
+      required double site2_pos = 21
+      required string site2_gene = 22
+      required string treatments = 23
+      required double paired_end_read_support = 24
+      required double tumor_read_count = 25
+      required string annotation = 26
+      required double split_read_support = 27
+      required string level = 28
+      required double normal_read_count = 29
+      required string confidence_class = 30
+      required string oncokb_interpretation = 31
+      required double sv_length = 32
+    }
+
+    repeated SV-VARIANTS sv-variants = 6
+    repeated undefined snp-indel-exonic-np = 7
+  }
+
+  repeated RESULTS results = 1
+  required string disclaimer = 2
+}
