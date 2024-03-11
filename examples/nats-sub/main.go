@@ -73,7 +73,7 @@ func main() {
 
 	// Use UserCredentials
 	if *userCreds != "" {
-		opts = append(opts, nats.UserCredentials(*userCreds))
+		opts = append(opts, nats.UserInfo("cbio", "bMDfucPSzstsGDjwN7wrN6"))
 	}
 
 	// Use TLS client authentication
