@@ -17,8 +17,9 @@ import (
 	"flag"
 	"log"
 	"os"
-
+	tempo "github.com/averyniceday/go-mpath-proto/tempo"
 	"github.com/nats-io/nats.go"
+	"google.golang.org/protobuf/proto"
 )
 
 // NOTE: Can test with demo servers.
@@ -53,7 +54,7 @@ func main() {
 	}
 
 	args := flag.Args()
-	if len(args) != 2 {
+	if len(args) != 1 {
 		showUsageAndExit(1)
 	}
 
@@ -87,7 +88,7 @@ func main() {
 		}
 		opts = append(opts, opt)
 	}
-
+	opts = append(opts, nats.UserInfo("tempo", "unsure"))
 	// Connect to NATS
 	nc, err := nats.Connect(*urls, opts...)
 	if err != nil {
@@ -95,7 +96,32 @@ func main() {
 	}
 	defer nc.Close()
 
-	subj, msg := args[0], []byte(args[1])
+	subj := args[0]
+
+	tmsg := tempo.TempoMessage{}
+	tmsg.PipelineVersion = "v1.2.3"
+
+	events := []*tempo.Event{}
+	event1 := tempo.Event{}
+	event1.Chromosome = "7"
+	event1.StartPosition = 55249071
+	event1.EndPosition = 55249071
+	event1.RefAllele = "C"
+	event1.TumorSeqAllele1 = "T"
+	event1.TumorSeqAllele2 = "T"
+
+	event2 := tempo.Event{}
+	event2.Chromosome = "7"
+	event2.StartPosition = 140453136
+	event2.EndPosition = 140453136
+	event2.RefAllele = "A"
+	event2.TumorSeqAllele1 = "T"
+	event2.TumorSeqAllele2 = "T"
+	events = append(events, &event1)
+	events = append(events, &event2)
+
+	tmsg.Events = events
+	msg, _ := proto.Marshal(&tmsg)
 
 	if reply != nil && *reply != "" {
 		nc.PublishRequest(subj, *reply, msg)
